@@ -1,4 +1,3 @@
-i
 <!DOCTYPE html>
 <html lang="it">
 <head>
