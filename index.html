@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claudia Grasso - CV</title>
 
   <style>
@@ -11,12 +11,12 @@
       --dark-soft: #2f4054;
       --cream: #f6f1e7;
       --white: #ffffff;
-      --light: #f8fafc;
-      --border: #e8ebef;
+      --contrast: #edf1f5;
+      --border: #d9dee7;
       --text: #1f2a37;
       --muted: #667085;
-      --shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
-      --radius: 20px;
+      --shadow: 0 14px 36px rgba(0, 0, 0, 0.10);
+      --radius: 22px;
     }
 
     * {
@@ -31,10 +31,15 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(31, 42, 55, 0.08), transparent 32%),
+        radial-gradient(circle at top left, rgba(31, 42, 55, 0.08), transparent 34%),
         linear-gradient(180deg, #f6f1e7 0%, #fbf8f1 100%);
       color: var(--text);
       line-height: 1.6;
+    }
+
+    .ios-emoji {
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+      line-height: 1;
     }
 
     header {
@@ -55,47 +60,18 @@
 
     .floating-icons span {
       position: absolute;
-      font-size: clamp(1.4rem, 2vw, 2.2rem);
-      opacity: 0.10;
-      animation: floatIcon 6s ease-in-out infinite alternate;
+      font-size: clamp(1.7rem, 2.4vw, 2.8rem);
+      opacity: 0.11;
       filter: grayscale(100%);
+      animation: floatIcon 6s ease-in-out infinite alternate;
     }
 
-    .floating-icons span:nth-child(1) {
-      top: 18%;
-      left: 10%;
-      animation-delay: 0s;
-    }
-
-    .floating-icons span:nth-child(2) {
-      top: 28%;
-      right: 14%;
-      animation-delay: 1s;
-    }
-
-    .floating-icons span:nth-child(3) {
-      bottom: 18%;
-      left: 18%;
-      animation-delay: 2s;
-    }
-
-    .floating-icons span:nth-child(4) {
-      bottom: 24%;
-      right: 20%;
-      animation-delay: 1.5s;
-    }
-
-    .floating-icons span:nth-child(5) {
-      top: 12%;
-      right: 34%;
-      animation-delay: 0.7s;
-    }
-
-    .floating-icons span:nth-child(6) {
-      bottom: 12%;
-      left: 42%;
-      animation-delay: 2.4s;
-    }
+    .floating-icons span:nth-child(1) { top: 16%; left: 8%; animation-delay: 0s; }
+    .floating-icons span:nth-child(2) { top: 27%; right: 11%; animation-delay: 1s; }
+    .floating-icons span:nth-child(3) { bottom: 18%; left: 16%; animation-delay: 2s; }
+    .floating-icons span:nth-child(4) { bottom: 24%; right: 19%; animation-delay: 1.5s; }
+    .floating-icons span:nth-child(5) { top: 12%; right: 34%; animation-delay: 0.7s; }
+    .floating-icons span:nth-child(6) { bottom: 12%; left: 42%; animation-delay: 2.4s; }
 
     @keyframes floatIcon {
       from {
@@ -103,7 +79,7 @@
       }
 
       to {
-        transform: translateY(-12px) rotate(5deg) scale(1.04);
+        transform: translateY(-14px) rotate(5deg) scale(1.06);
       }
     }
 
@@ -115,27 +91,27 @@
     }
 
     .photo-wrap {
-      width: 132px;
-      height: 132px;
+      width: 140px;
+      height: 140px;
       margin: 0 auto 18px;
       border-radius: 50%;
       padding: 5px;
-      background: rgba(246, 241, 231, 0.22);
-      border: 1px solid rgba(246, 241, 231, 0.35);
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.20);
+      background: rgba(246, 241, 231, 0.24);
+      border: 1px solid rgba(246, 241, 231, 0.42);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .photo-wrap:hover {
       transform: scale(1.05);
-      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.26);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
     }
 
     .profile-photo {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 35%;
+      object-position: center 34%;
       border-radius: 50%;
       display: block;
     }
@@ -193,19 +169,19 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.90);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(8px);
       padding: 24px;
       margin: 15px 0;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.75);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.13);
     }
 
     h2 {
@@ -219,15 +195,15 @@
     }
 
     .section-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 13px;
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
       background: var(--dark);
       color: var(--cream);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1em;
+      font-size: 1.08em;
       transition: transform 0.25s ease;
       flex-shrink: 0;
     }
@@ -236,13 +212,20 @@
       transform: scale(1.12) rotate(-3deg);
     }
 
+    .content-box {
+      background: linear-gradient(180deg, var(--contrast), #f8fafc);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
     p {
       margin-bottom: 0;
     }
 
     ul {
       padding-left: 20px;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     li {
@@ -260,7 +243,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: var(--light);
+      background: var(--white);
       border: 1px solid var(--border);
       padding: 11px 13px;
       border-radius: 14px;
@@ -270,7 +253,7 @@
     .info-item:hover,
     .contact-item:hover {
       transform: translateX(4px);
-      background: var(--white);
+      background: #ffffff;
     }
 
     .mini-icon {
@@ -304,7 +287,7 @@
     }
 
     .highlight {
-      background: var(--light);
+      background: var(--white);
       border-left: 4px solid var(--dark);
       padding: 14px 16px;
       border-radius: 12px;
@@ -312,36 +295,106 @@
       color: #344054;
     }
 
-    .interest-scroll {
+    .interests-card {
+      overflow: hidden;
+    }
+
+    .interests-box {
+      padding-left: 0;
+      padding-right: 0;
+      overflow: hidden;
+    }
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .marquee::before,
+    .marquee::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 70px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .marquee::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--contrast), transparent);
+    }
+
+    .marquee::after {
+      right: 0;
+      background: linear-gradient(270deg, var(--contrast), transparent);
+    }
+
+    .marquee-track {
       display: flex;
+      width: max-content;
       gap: 14px;
-      overflow-x: auto;
-      padding: 6px 4px 14px;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: thin;
+      animation: scrollInterests 22s linear infinite;
+      will-change: transform;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollInterests {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     .interest-card {
-      min-width: 135px;
-      scroll-snap-align: start;
-      background: var(--light);
+      min-width: 150px;
+      background: var(--white);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 18px 14px;
       text-align: center;
+      box-shadow: 0 8px 18px rgba(31, 42, 55, 0.06);
       transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+      animation: aliveIcon 3.2s ease-in-out infinite;
+    }
+
+    .interest-card:nth-child(2n) {
+      animation-delay: 0.5s;
+    }
+
+    .interest-card:nth-child(3n) {
+      animation-delay: 1s;
     }
 
     .interest-card:hover {
-      transform: translateY(-5px) scale(1.03);
-      background: var(--white);
-      box-shadow: 0 12px 24px rgba(31, 42, 55, 0.10);
+      transform: translateY(-6px) scale(1.04);
+      background: #ffffff;
+      box-shadow: 0 14px 28px rgba(31, 42, 55, 0.12);
+    }
+
+    @keyframes aliveIcon {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
     }
 
     .interest-icon {
       display: block;
-      font-size: 2rem;
-      margin-bottom: 8px;
+      font-size: 2.35rem;
+      margin-bottom: 9px;
       transition: transform 0.25s ease;
     }
 
@@ -350,26 +403,25 @@
     }
 
     .interest-card strong {
-      font-size: 0.95em;
+      font-size: 0.98em;
     }
 
     .timeline {
       display: grid;
       gap: 16px;
-      margin-top: 8px;
     }
 
     .experience {
-      background: var(--light);
+      background: var(--white);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 18px;
-      transition: transform 0.25s ease, background 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .experience:hover {
       transform: translateY(-4px);
-      background: var(--white);
+      box-shadow: 0 12px 26px rgba(31, 42, 55, 0.09);
     }
 
     .experience-head {
@@ -404,7 +456,7 @@
     }
 
     .competence-tags span {
-      background: var(--white);
+      background: var(--contrast);
       border: 1px solid var(--border);
       border-radius: 999px;
       padding: 7px 10px;
@@ -425,20 +477,20 @@
     }
 
     .skill-box {
-      background: var(--light);
+      background: var(--white);
       border: 1px solid var(--border);
       padding: 16px;
       border-radius: 16px;
-      transition: transform 0.25s ease, background 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .skill-box:hover {
       transform: translateY(-4px);
-      background: var(--white);
+      box-shadow: 0 12px 24px rgba(31, 42, 55, 0.08);
     }
 
     .skill-icon {
-      font-size: 1.6em;
+      font-size: 1.7em;
       display: inline-block;
       transition: transform 0.25s ease;
     }
@@ -471,21 +523,10 @@
       animation: fadeIn 0.7s ease forwards;
     }
 
-    .fade-in:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-
-    .fade-in:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-
-    .fade-in:nth-child(4) {
-      animation-delay: 0.3s;
-    }
-
-    .fade-in:nth-child(5) {
-      animation-delay: 0.4s;
-    }
+    .fade-in:nth-child(2) { animation-delay: 0.1s; }
+    .fade-in:nth-child(3) { animation-delay: 0.2s; }
+    .fade-in:nth-child(4) { animation-delay: 0.3s; }
+    .fade-in:nth-child(5) { animation-delay: 0.4s; }
 
     @keyframes fadeIn {
       to {
@@ -515,8 +556,8 @@
       }
 
       .photo-wrap {
-        width: 116px;
-        height: 116px;
+        width: 120px;
+        height: 120px;
       }
 
       .card {
@@ -529,7 +570,7 @@
       }
 
       .interest-card {
-        min-width: 124px;
+        min-width: 135px;
       }
     }
   </style>
@@ -539,25 +580,25 @@
 
   <header>
     <div class="floating-icons" aria-hidden="true">
-      <span>🏃‍♀️</span>
-      <span>🌐</span>
-      <span>🎮</span>
-      <span>📖</span>
-      <span>✈️</span>
-      <span>🎵</span>
+      <span class="ios-emoji">🏃‍♀️</span>
+      <span class="ios-emoji">🌐</span>
+      <span class="ios-emoji">🎮</span>
+      <span class="ios-emoji">📖</span>
+      <span class="ios-emoji">✈️</span>
+      <span class="ios-emoji">🎵</span>
     </div>
 
     <div class="hero-content">
       <div class="photo-wrap">
-        <img class="profile-photo" src="foto-cv.jpg" alt="Foto curriculum di Claudia Grasso">
+        <img class="profile-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wgARCAEfANwDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAQIAAwQFBv/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAbCSQkgYkBJBGIseCxoKHggsAgcCBwVixSsWKIGBYSSNGAxICSAkikkWMABoLGAocCLYCtbFEWxSsOpY0YjRiGMAkghQcZ8EdbNys53L/PQ9JPPdM3RXpQwEWxRFdRFcFjRiMGIYSSUFfBszyxGAWtuly16KLI9YTb1PP6V9JM2mwKwFV1EV1LWDBMJDEM3BsyymEk6d2vO0Z5LRRsU4+L0XH1nLJLjR2/OWr6cK1gDKKrqWsrBIJOTp4UtchJrzdaa1WK2dGCUFZRcO6iOILK984VJ2Ol5nsJukFAMpaQQ0X1nI5mzLKVZS7pY9GejmpzY1VpXnesggMNGnNcIwljbMVx6B8O2wqQWkEOTVxo5yGtXAY61p046421gR4DNVpY5x2yzDh6nKuYkNzHrh2tfF7CXiSrSpJ5/pciXOphJGO5pwac9LaksldaELLKWL64tU8np8y4SSXBEi2d/jaTqmmyy8Ss5eWzFKACR62Ojt4vYzuF0mmW0VUsYgaqMmJ698islkIMr7ct50dGe6zRh15DHztGWUgEjK43Qp0aml82jl2C3Bao1VkotFzgy93j75VCSUiQbZlsl6ermb0s52vjlawLJJY2yjbRvYUrrZy6rDBY0AV1axMXQy9McSvqc3NSSRL6NJo2ZNkcmm5KqhBGUmno8/salhshidpz61xpKAUR9CWdOZo0UambF0ccc1NdGahDG3bz90Z8+rLWcOAAuX9jlb9TdKmIj18+kBXOhajbw4yjpjoUUMSq8mXL0qpeLN2bJuhzt0Pzeti1MZtSWvWm+k1rbqLYsDWV59IYdZVTbvNdrCKxcgjiBrtSKsu1Dm7CZXQtqVF2iu+NUYGDBKrJslFQv1mMJLCIFGSAFYgCDqawV2IO1bkZWLCrBKkiwUsxUx1LsOyniyDBA1PWGISKjDVsgUZIZ0IzKSwqQlQGtqa50sbNHU5nT1GIgwEIkBBAVWVWAAJFZI/8QAKBAAAgEDBAEFAAMBAQAAAAAAAQIAAxAREiAhMTAEEyIyQSMzQEJg/9oACAEBAAEFAv8A3tSsFPuERXDf5mYLGroA3qTG9Q7TMRtJauxiV+adQZDf4q9b21dy5sNofEWswNGtn/BUcKtWp7htiLSzBRIjKYdivKVXUvlrVfbFRy5siljToQKBMQoDGoLHoYn7am+g0qwqeRjgVn1vYctSTA2mVk0vDxZGwVOR4vUVwRMWoplhvrrlTsoVOPDUr4LnLWUc0RxvaP3s9M+pd/uDNfh7pAvGGEDsIrZsWxDVM1MYWMfbQbDg72USowC3pDgvpmthA+YkMOJqAnuiasx9tM6WVzvrPpQ7KQ+JpiFAYE4AjTEK8BIEIjCfp2U/ktM5XbXPDd3p/XY8ExNImIwjfbZQcqUGldhMr5mdlH6TMzqOoCM0PQNjGh72I2lkbUNlWriVTmG4lE/x5ncxxpxCNUC4nUzDKh4O2kAxo5DK2dlT+2t2dnpm+MzpgqAzUZqmoTUDeueB3sA+ND4tTu0quDUJydiPocGxUQQ9EZIXFjKjZbO3gu7fyU718yuR7e1VzE4gNsTFyY3MqpuHacGh/XD1VYaGPGxRmDif8iA7CbYyzrqDrjauIk5W1QkT1BVCWJOxBMR/ovVs7KYmIy6gy42piKwUhsxqySpy2xBKY5Hb/ROtp5g4se6i5hHN0qaRTOoxxpbZiUe0ExmETpttMXbthKqwjZSNsEw7UGJTTAtUHy2dxRi7dmEcFTki6Nl4gzKneyl1TYYtU2GAYEDLZraZpjLP2UsaogjnLXGBE5YDhDap9LgQkRmLQLYE3/WAmngiCL9T8A3dwplNeBd/65mx6xMWxMT9HWIRNMqLwBmL9Y6zRCIiwLxsqfSYviYti/7DbuYuRNMKwJuqdKJ1OyBjxmGw8RsTmDi/7Mw7uybDxMcQtkKMT82m5ghsbDxVK0FUygeMzPhHmc/CYlI4YQbTf981X6gHLZiD5eAz92//xAAcEQADAAIDAQAAAAAAAAAAAAABAjAQEQAgUDH/2gAIAQMBAT8B9DVdZIkLDqa641mivU1NmmMma4Y0X5wtXfi//8QAHBEAAQUBAQEAAAAAAAAAAAAAAQIQESAwAEBQ/9oACAECAQE/Afuy4yPjGw2GJ2ig4jAVSxuGLhjcMpkjowDq4JvFo2nz/wD/xAApEAABAwIFAwUAAwAAAAAAAAABESAhABACEjAxQEFRYSJxgZGhUGBy/9oACAEBAAY/Av77lFTNQeNJrcUoPwldLKKlPqvVhwke1enY8NanR3WsuKO3AmvGoNdSyWwzxXnVXlnDhYuhDU0iBhVN6J5UxWLKW72lkC0jXy4d+rpqdRaTFu9XzSN76Ev+WjTLe4PSkcT0JaOWaHBxDCYFFRIYfFD2aReK2rbTzL1r/WxrF7sOXZytTTHavVsNqXvcn6rDl24CvOfCz1ceanagMO9hKL1oJJ7mpaljoL82L/cWRajQIelvyxblSlNk0iHEtgaymvNg2Lp8MVGCLq6bh8EV9Xi03m5ZNRZC5bIIF5el4Zs+K88RNX84iVPNQP8Az+PQW35J5ycH/8QAKBAAAgEDAwMFAQEBAQAAAAAAAAERITFBEFFxIGGBkaGx0fDB4fEw/9oACAEBAAE/ISCCCCCCCCCCCCCCCCCCCCCCCOiBIgggggggggggggggggggggggjVIgggggggggggggggggggggggaGtUJCRBBBBBBBH/lBBGjQx6JCQkQQRpHS3UQYJecIm4O1RVQG0rtITm3SxoYx6IQutNSXJIpuGRoSePsMsnCGzmcjc0hrKegKXy0EXW4SEPt0sYx6IQuqglV0UkteRuhLGL2HQaQlsTaNox4KJLZ3PPSxj0QupqbQPS3ZZaTJJjjVBK6EZVDU8ioQpJuyYqY6x0seiF052pLkzpCUhCFgRDYuSGB1dR3FFRjHy3CKE+HQx6IXQhjbhIe6VME1JFiQhIlBGrEKwrMsxAmNmV0QzVeh6LoZfayy9hSMlUC0Fq9GOkCQy7lkmRbSUNUE+ldE02ZhCEGWKxBIIStJ6GWlLkULaK0kgm5i09K1a2StJiWJjjVS7IoKVkWsj2vsHZ27G6CCNi1rohY7FV7xmJwhkmByIy4gnXW5LmJv3IMdzRsnTPShiHuYghgtK1Rg2IfkaIJSg0QRAi4I7ikXVmuhaySXsuSl1uSNmSi4GKtETdAihZEQ9BzF053IU5u3MxpuU+pCZyUED6dLsJ3TOFsVidHaRfQEQMRYMNGdoaaThURuIh6/oEAzmL9KFcZpaMwtCuLRvTExxQuIJgQZE6k61PQvsnWwpDYhDT0nSSZCpWCXmtbUEh6pKZ4RXC0blArA1aYMrSXaGIGGrQwTqsq6gvHA+KC5q3QaZnKeYx3GdZJWU0YE4E3gmZwxIoWbLYbJDZM4PESolCGyzyxoRkxqxighYO0JppYFyU8ur43HIiqvA+R6OmkjkPMZEuqyIuB4ymM3aJx5YpbDcIcY97WFCyroozqqYoVKSlUgLR8hOiopHVQIVRsKasRk2GjGETLUxA3oUo3Gr5dC0dqhxO4+1l6DU7TTsiRoskQqRPcfK8TRvodyQLwQlDxfctTWnNCRtEjIFQdiR71Gvaj6b+TsQvNNSROYS1qimKkYULVjYgA2q5JMmnoVXAmxCjDdeCK8hb0lki5GlB5sPHx9C0H+qSGndGCdIEaW1TAptV2MC1lT6CTkHUlm2w+hN2TzdsIWJvFZYrfaQWdY1SUci+Cr4syMfmwtf7JAbpD4SMRQ5VkKiJ6Y+hUSx3JYHN4pUWa9F6ki5lkGQQQQNwSeyKniv2Rjx9FTlLafse9ya9iC+s12MecidBM1rAsYjoVXA5ZWTILdSqv/ANMgifuoFYgjRp0iClshUdMV+yPx6GXepeuKrepepTSvdbkoxrREaIxZSDgSvyJWHpFRjUTyPKmqqM/omJR+/S5xiyxyZVxVc9wlVwxqu1fRjdu5dvlCRcRTgVLbVwNTYRFyGTCSL1Il2JwlR21gmBEnDcvPJR2CanzIT0bK0vAtd+gouFynTgtVSs+BqZzA4qsKj4I39fhkOEUc+48q2v4yVN6DFEjJqiW87CwikZS1gh2NIWRS2hBVSCGDp/pZPkiI3Mj1HcqpUyylVbI1zO/j7FvIhd/6x1dv4heoVZDKE+eGOr2+iSsd/saWx+gwUU7ahblgakSqpVJOxBRkz7ZKCEYEv3sK3YiV3+zEjVcCsJK96tjzgSmvt2Fu/bi3cfZOfJs/Nx1c7y/4Oi8Msz7/AMFeHaw2cjWPH0NBwEKs+hMJE20JasJlCWfJB23oX8/0xOBK8hkUcjUP1WVVFl7noCIoO3ePkV+0/BjvHuzP7BsuETPyY9hPPeRrHjRXp8dELo/4Tlc/QnDaxYrgsSXYSEVmJ9jtwh1X7JN3efQVo7JDy8mwTM6N0Gz5/o3waF0FpbxpNP2Sc/qaRJ2aKYtpZMjuhV8Pkv5Jzyztwic8s7cIb7FT3ejjHwN+oQtZO3gn7Jn3biahxyiobnJV7G7lnbhE55Z24Q3nljv6Ix4JuyalGiqYGK+iELWYHt4ImdiBsro4ZifvBguCaTyztwiaTyxvHCGoZ8js+CaxDdvAupC6Kk28ERgXuQPhQwf6f4ic8sf0h/euQr9caM//2gAMAwEAAgADAAAAEFBJDHFDHNDDJNDFKIDCKBHJBEPALPKGMEE+9/4ANDGMLPHCvMlZ2oHABAEJLPEQ71PxFJFCONrAU6NVysp5JFOFVfNHTXG7odHNG/botgMqRUvb0CButib398Ma+rrHJSpj5acRtVchhacgroylsCL2GYvy0kRPIMVApBOYX/aFW46DTfhJ1eL2oHe5w/yjvshM53wquXqKqJgsV2XEBzf+IiXAG2z607uUQ/B6Mln3Q2Q79071QtXWTwa6ff/EAB8RAQADAAIDAAMAAAAAAAAAAAEAEBEgMSEwQUBQUf/aAAgBAwEBPxD9DkyZM9XVCies8wBf2PQFH7wSJ5pOY8QR6rK7ciNEys2YOBss6nVEeBstaQNmP8mZGLWizgKOkGmLxB4k2lhWzYvlHNryLWtHNhOlfCbNhw2m1kM9XnDeWszk+jPx/wD/xAAdEQACAgMBAQEAAAAAAAAAAAAAARARICEwMUFQ/9oACAECAQE/EPwbLL62hdHaW4NwxUUeCcJ5t7HaEy+Bim4Tou8zwYuhIqEJVxo1TwTZRwTFPsJWeiGzRylIUKn5KaGj1H0EKGNS1ZQkMTYtbZ4WXNDChT6s8wYpWKWxu8HheD8hYuf/xAAoEAEAAgIBAwMFAQEBAQAAAAABABEhMUFRYYFxkaEQscHR8OHxIDD/2gAIAQEAAT8QCEEEEEEEEH/wAGGGGGGGGEiSofQEEEEEEEEH/oB+gwwwwwwwwkr6BBBBBBBBB/8AEAMMMMMP1AkSD6gQQQQQfUVK+lSpUqVEjDDCfQEET/wAQQQEICBKqLBALvMRxtSk8rEegpeuHjXtLch6XkhtkdVqAbQnUbiRIkSD6AggiQQQQIECBK+liF7qlbl4CVlumLbbHe2/SDUl6QviG165lva5uYhRepZ9oXsjSIB6MoASBNV1PtKe8nrEjEiQQQQRMwQQQIED6OCYdKZG2XqpbBcEQtq9Ew3cFFIOBygEiNdmK4o6yrNEi5J7MpD1IgwWAA5AHRf0YkSCCCJmCCBAgQIoFw0uCHW6l0FNXe7GksnW8BFJUK0wbRSNp7EE6alHaVLxdWLj0d1VxlQoD0uUYLF+vMuMYkEETMEECBAi0QloDMDy9pnqdAYA7QG5xM5sqXAV1qBDk9yGAJGqqQyhqAtFMKQoStRnUENneW4ghWmwafU7wpq8rC95cY/QIkEECE0ShsLWa2LhfEb2Sy4FUcVqZxwsckywwV9CRIYCUw2PL7MRUaZRKXOY2VuuIeWkE7PWG6Amz6MYIkECEJpL5nTREFyqWNgHWClCkihwSgB9FxYozlOYAxEEzcWpMdJR0UcQqtbYuiAou5Yd5dRjE+ghFP8AZhapW1Z3ml+7Ms9nSVQtoJhtwBWEl19CxYzSG2PMCGirhZTauCCmHUWo1zGV7aCtCvqxPoIQSipPF/jzGuIJC8q2EWwOsHyBhsvwj4svSXRR6NTb31I3sO8pGVRwwjENF7GIAtrkcQto5feCvF+7Bn8SiFwUoaJcnNiuyt+IZXY9GXGMIfQlLBWFg6JzBjhYv3XBcwbllVwRCYwzBa7wgUvrHt7tWu8MGh5qWOFQVDXJ6x7Ad1QPeYKXaMphXkYygYMy4Ei3LdxoL5mLnmKIs0UupuohgV8QbjH6CLRcbLhg6/z7Syj2bmLFBrM4QA+yOmZ1h3DUW1iOAIllcS7qVH0lVvmbjVrK5lKohQ8IRzOm6lAkIQoXG8+0dbz1joyXUoKcMNd8gGNd/W4q3eV6mJf0IRFrmZVdhi9vrmLKtvNRVpBdQFBLmORAVKvBKBjEzcRXTpAZtSNl09oASiAWxAjrEpbqI5cRcwlYTaqhbhr5jW42dW8/MuXCEBtVCrVMDScPuxriZXeYhsfEzqWJ2wKhNmNStDfeUCy+0XedwVgA36yrvcW4wmbM+qViuIKMS2yGWOYx1ZNneDsb3UvH0Ee6ZBEUKgr2XVbX0qOaqooEDuXl7rGqZzZgYXdhCviknvLDXQVT2YWlaD6wSgxUpHI5lKi0cQsbaOGKYNM1lhBYtYl6NJaKueZkU8S0NkML3iwKMwlOSJBcN8fEaGYAGzMuEq7oAzIHcr4YisEUC4tgaEyTdrzqPpKjzc0c1LKZsPRiInSPKu2i2CtgbKqNkG0WnaKFQHLHky7xyCezAmsnErIRS8ldiHQZEfWBTjDFAag44j1RBVuWg063NmYKljY+sYVRc3XgPiXBgINQVNdNv68ypDoatu67Y+Y2RV2wGmrqAG98QYW1j0jyJ47iEjCCxOZlljlBV4aiGwlBmLUHvfeXYiNIaqYoL6zAEMLcTQQwD0gZB3XqOpYp4QoX4g6t8RVD2hXlijm3TI2GYlt3rm+N+Z6IMHj4i8C8J9mJOx2krL9+YIF3LG2NPrACVyTVL4jMNHm43B6jrtCxMpqJc17RXr5gDRKCcEKGdIJXkzVeoxLhlzHdVKcy83MetDwTvKgw3VjB5rm4lLskDscH0XyLsJ4+mDcQ9q7rB6EUuEKuZQ4hrllIDwa9+Ybxr4XwR+kQUpgYRLz0JoJZlWeF7uvtDpHAeT9ku5yCO5eJSZZUVjqUloHqzM12oF4gyi7ojHVIqMFrMEukMytY7F9WZACCFd7zGbF3lhZ9DTAiNuIwGKuT++8shqtHJ/cswUFvAUfM1OxKplemP8sb2fEJQDPEeyZKeg/qBVdWn0c/KFFTmnoo/cY/TU96nXzGxUEpEvvDIHF9Y/jhgli8wrqIJkseDoyrpLrLIg7doUfMGVD0IwbPpUuo3N6HKxqrIpMCc32mmbsBrBqu2obAUGPXbM/QiRLfoCBGLbt2IQ1kp8Cdd7n5UzaVaNeEBQ587fyTMCi8hEo9INM3M9LdN05iRRcU1Q89/pFUsGROYOYy6l3lg0SUvbtjb2hPFBa9V+u3MYBmhLOVb8Q3AAQY6oH2ms1TZ6MbFxyhBQhBY1nbjw/2pW1ZPcrA/MMrPr+VMglKl+tn+y2q7M1qaVDMC6t088RHWHOPoIGszkC28QktvbbnvBBhfSO3BkrtJkm7h2RIysxIJ7R4tUp73gmrE2xWDj3qFVgoXjT/AJSglaoDtUpXkXjMEOcwY4j1VsAQuj33+pR9j3uBMXLrb5UArrkXaC6T0FrI41bsuTHqI9hTRRmn/Zi2ZVkqVSkLuhrOYF8A0ahTeFHeMMpko8PRi0tjmz2giTQ6sxAW3nvFdxLy6GpQcrDqH+7hneVN93k/TAbHnnvLEcfiyokSYd1wBzAY3ue/SYAJlxfQ59MX4IOLQO93UVIRLrHtKk7Hssbk2wvweEmQCVQtUwVRFzdTzPUjcYOxhOHzLAEA4xF6KjFSdF6is9ekqs7zLXGZZMPtyaiWUGesbaNVCgYVdXCGxu7TECDjQ0wgWysI1l3rP3YtltwXvv4hksp2+vP5lG7x9yWlckWAfqMUrfYSloGsGz+pSlBdtvS+3NThKuj5/wA+8y1AtwawwQ4Wcxd3WSEWZ0HkPi4vN8tCOH8kWQWKjodnozARigfY8RKy9um+nuRiho29YABwBfy4tkaKvrFzKMYLrpM+68R4iS4dHGHnvB1I0sMq7Zz0yxiAtx0tf2hLoxudjP3SCabQ15cvxLoryX+GYF2V95dgNhC/wHT1hWJ5gxjpN4XC09oYUs1Z7uVCWxjb7fqjzF0cCv47Q00b1/HeUJe1e7n7VBUmhVfTf2CaBwBbXQ8R1HN3eibQncLqdEwIFRXA9HK94tqxePx72eYrordtHaNcNY6VBVOuT0/iHt3C/Vy/Ew3scGC5cAStrzFJDDTmty/AKPNbZeKc2nnD4uEpezb6GfvLAOxns5PsS7I4s8Vf7lPdD50/iOzRbWJVo0YIrHX9R7VwK6HTxv1l1RhcdA48sEOVWPfn9JQVS1F94s3XNPm4PiJSvYfdTTcg+yUtP6aIvMBp6Qr2EXeWjfiIUc2t9TfuQPRz7OY5nOXzh+YVUCIdRWHLh+Zk1zdecExwCuDWMSnIawWe774hkFLoa5NvxUqKbp8nBMLrRr0MHzcCwXR4bYL2ovyqPiCNJt8D+ljJtGj+9oKuQ0+x5gZKUbfs+hCizyX1Xj5z4ggeAvgwfOYBC0UPoZfmJR1W8qAyrl8CNnap5I0JNGvQfuPwfmY0D1H3MV9bh6uX4gXhgA9NTNXv5mSKhdCL6X/svbjLj+9ZSgksK9Hz/MSn0/BDRXQPywXR4/H7gWKbdef8hhs1dnoYPmVWPHt/qyrK5Q92X4jYdjY+0ChlYdqNx1Twl96x+oNDQlt8Xy+NR7wUB9WvdlTTCXgUQwC6fmYlOqV5X6iLcBeAogw5e4W2YHpv8SOhPQ/Jimjbr1cHxHkNa8GPvKsXR8uPtAcvSw+CDm1tFX2Surd+80zuj3MTC4xX1tmzun3YZt62/iWr+/uYNZOLT7EK9H4f7Kqh9P38sU2NuvX/ABKFjRk9B+5VFPAD92VzFFIb3/yZBu7B8HpKjoJfQtlgOWvuv7S8+7Hn/CJvovwmCBjqr3csd+72cE5O72C2Kl8t+S0RFHgfYwS2qMpjz/1YNNcr7GIimM788ERTzTHfOY4etF8jFa+v3Jc2rqBLxfq/gmsdMexHWekVePx/sMYdGHxl+Y35/P8A1jQs4tPXRH22eBljel05eX9EVRGrKyXd4iUMqwUkJJWOD0yvdgRstp77+MQuJ/jBKz/Hlh/b6Er+PqzE9nuYJgTo+wXL17T3Y1ehb/e8W1dFHr2iRfJ92KYHQ16iRWzzj4i3bsMGYqDBr7e0XL6xZ/v7iLV+fvBrfn7sWjPH/WYL4M+2Is9X3O5UbWSfYg3Qs2AX1KiDzYJ4gidk+I09B+Z5le5gnPq9jLH2nuYJm9XsZlluaX3xLr0fYR/07S2Df2mFDxjy7mIRgezHp6kdwMzNePvD6F/fMHr/AHMtQ8fOYKhfa/vBWedeWUMdA9LlKyFqypfupWFqepXWC29H5al0qcWPtKzXeAoOioJ36pTddw9pmvUX3Zav5zAiVz8wsrskzZ4+8p9jHfn8QOPSf//Z" alt="Foto curriculum di Claudia Grasso">
       </div>
 
       <h1>Claudia Grasso</h1>
       <p>Curriculum Vitae digitale</p>
 
       <div class="header-actions">
-        <a class="btn" href="mailto:claudiagrasso91@gmail.com">✉️ Contattami</a>
-        <a class="btn" href="tel:+393921283051">📞 Chiama</a>
+        <a class="btn" href="mailto:claudiagrasso91@gmail.com"><span class="ios-emoji">✉️</span> Contattami</a>
+        <a class="btn" href="tel:+393921283051"><span class="ios-emoji">📞</span> Chiama</a>
       </div>
     </div>
   </header>
@@ -566,180 +607,226 @@
 
     <div class="grid">
       <section class="card fade-in">
-        <h2><span class="section-icon">👤</span> Profilo</h2>
+        <h2><span class="section-icon ios-emoji">👤</span> Profilo</h2>
 
-        <p>
-          Sono una persona socievole, curiosa e determinata, con interesse per tutto ciò che può
-          arricchire la mia persona in meglio. Mi piace imparare autonomamente e mettermi alla prova
-          in attività pratiche e creative.
-        </p>
+        <div class="content-box">
+          <p>
+            Sono una persona socievole, curiosa e determinata, con interesse per tutto ciò che può
+            arricchire la mia persona in meglio. Mi piace imparare autonomamente e mettermi alla prova
+            in attività pratiche e creative.
+          </p>
 
-        <div class="info-list">
-          <div class="info-item">
-            <span class="mini-icon">⏳</span>
-            <span>Età: <strong><span id="eta">22</span> anni</strong></span>
-          </div>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="mini-icon ios-emoji">⏳</span>
+              <span>Età: <strong><span id="eta">22</span> anni</strong></span>
+            </div>
 
-          <div class="info-item">
-            <span class="mini-icon">🚗</span>
-            <span>Patente: <strong>B</strong></span>
-          </div>
+            <div class="info-item">
+              <span class="mini-icon ios-emoji">🚗</span>
+              <span>Patente: <strong>B</strong></span>
+            </div>
 
-          <div class="info-item">
-            <span class="mini-icon">📍</span>
-            <span>Città: <strong>Catania</strong></span>
+            <div class="info-item">
+              <span class="mini-icon ios-emoji">📍</span>
+              <span>Città: <strong>Catania</strong></span>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="card fade-in">
-        <h2><span class="section-icon">📬</span> Contatti</h2>
+        <h2><span class="section-icon ios-emoji">📬</span> Contatti</h2>
 
-        <div class="info-list">
-          <div class="contact-item">
-            <span class="mini-icon">✉️</span>
-            <a href="mailto:claudiagrasso91@gmail.com">claudiagrasso91@gmail.com</a>
+        <div class="content-box">
+          <div class="info-list">
+            <div class="contact-item">
+              <span class="mini-icon ios-emoji">✉️</span>
+              <a href="mailto:claudiagrasso91@gmail.com">claudiagrasso91@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="mini-icon ios-emoji">📞</span>
+              <a href="tel:+393921283051">392 128 3051</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="mini-icon ios-emoji">📍</span>
+              <span>Catania</span>
+            </div>
           </div>
 
-          <div class="contact-item">
-            <span class="mini-icon">📞</span>
-            <a href="tel:+393921283051">392 128 3051</a>
+          <div class="highlight">
+            Disponibile ad apprendere, collaborare e crescere in nuovi contesti professionali.
           </div>
-
-          <div class="contact-item">
-            <span class="mini-icon">📍</span>
-            <span>Catania</span>
-          </div>
-        </div>
-
-        <div class="highlight">
-          Disponibile ad apprendere, collaborare e crescere in nuovi contesti professionali.
         </div>
       </section>
     </div>
 
-    <section class="card fade-in">
-      <h2><span class="section-icon">✨</span> Interessi</h2>
+    <section class="card fade-in interests-card">
+      <h2><span class="section-icon ios-emoji">✨</span> Interessi</h2>
 
-      <div class="interest-scroll" aria-label="Interessi">
-        <div class="interest-card">
-          <span class="interest-icon">🏃‍♀️</span>
-          <strong>Sport</strong>
-        </div>
+      <div class="content-box interests-box">
+        <div class="marquee" aria-label="Interessi in movimento">
+          <div class="marquee-track">
 
-        <div class="interest-card">
-          <span class="interest-icon">🌐</span>
-          <strong>Sviluppo Web</strong>
-        </div>
-
-        <div class="interest-card">
-          <span class="interest-icon">🎮</span>
-          <strong>Videogiochi</strong>
-        </div>
-
-        <div class="interest-card">
-          <span class="interest-icon">📖</span>
-          <strong>Lettura</strong>
-        </div>
-
-        <div class="interest-card">
-          <span class="interest-icon">✈️</span>
-          <strong>Viaggi</strong>
-        </div>
-
-        <div class="interest-card">
-          <span class="interest-icon">🎵</span>
-          <strong>Musica</strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="card fade-in">
-      <h2><span class="section-icon">💼</span> Esperienze lavorative</h2>
-
-      <div class="timeline">
-        <article class="experience">
-          <div class="experience-head">
-            <div>
-              <h3>Addetta vendite - Sala visori in realtà virtuale</h3>
-              <p>
-                Assistenza ai clienti, presentazione dell’esperienza e supporto durante
-                l’utilizzo dei visori.
-              </p>
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🏃‍♀️</span>
+              <strong>Sport</strong>
             </div>
 
-            <span class="period">Settembre 2025 - Maggio 2026 · 8 mesi</span>
-          </div>
-
-          <div class="competence-tags">
-            <span>Accoglienza e relazione con il cliente</span>
-            <span>Comunicazione chiara</span>
-            <span>Gestione pratica delle attività</span>
-          </div>
-        </article>
-
-        <article class="experience">
-          <div class="experience-head">
-            <div>
-              <h3>Operatrice ristorazione - Burger King</h3>
-              <p>
-                Supporto operativo nel servizio, attenzione al cliente e collaborazione
-                con il team.
-              </p>
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🌐</span>
+              <strong>Sviluppo Web</strong>
             </div>
 
-            <span class="period">Febbraio 2025 - Luglio 2025 · 6 mesi</span>
-          </div>
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🎮</span>
+              <strong>Videogiochi</strong>
+            </div>
 
-          <div class="competence-tags">
-            <span>Lavoro di squadra</span>
-            <span>Gestione dei ritmi veloci</span>
-            <span>Precisione e responsabilità</span>
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">📖</span>
+              <strong>Lettura</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">✈️</span>
+              <strong>Viaggi</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🎵</span>
+              <strong>Musica</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🏃‍♀️</span>
+              <strong>Sport</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🌐</span>
+              <strong>Sviluppo Web</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🎮</span>
+              <strong>Videogiochi</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">📖</span>
+              <strong>Lettura</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">✈️</span>
+              <strong>Viaggi</strong>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-icon ios-emoji">🎵</span>
+              <strong>Musica</strong>
+            </div>
+
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
     <section class="card fade-in">
-      <h2><span class="section-icon">💻</span> Competenze e attività</h2>
+      <h2><span class="section-icon ios-emoji">💼</span> Esperienze lavorative</h2>
 
-      <ul>
-        <li>Creazione di siti web</li>
-        <li>Buona familiarità con strumenti digitali e informatici</li>
-        <li>Approccio pratico alla tecnologia e alla progettazione web</li>
-      </ul>
+      <div class="content-box">
+        <div class="timeline">
+          <article class="experience">
+            <div class="experience-head">
+              <div>
+                <h3>Addetta vendite - Sala visori in realtà virtuale</h3>
+                <p>
+                  Assistenza ai clienti, presentazione dell’esperienza e supporto durante
+                  l’utilizzo dei visori.
+                </p>
+              </div>
 
-      <div class="skills-grid">
-        <div class="skill-box">
-          <span class="skill-icon">🌐</span>
-          <strong>Sviluppo Web</strong>
-          <span>Interesse per la creazione di siti semplici, moderni e funzionali.</span>
-        </div>
+              <span class="period">Settembre 2025 - Maggio 2026 · 8 mesi</span>
+            </div>
 
-        <div class="skill-box">
-          <span class="skill-icon">🧠</span>
-          <strong>Apprendimento autonomo</strong>
-          <span>Capacità di imparare in autonomia attraverso pratica e curiosità.</span>
-        </div>
+            <div class="competence-tags">
+              <span>Accoglienza e relazione con il cliente</span>
+              <span>Comunicazione chiara</span>
+              <span>Gestione pratica delle attività</span>
+            </div>
+          </article>
 
-        <div class="skill-box">
-          <span class="skill-icon">🤝</span>
-          <strong>Relazione con il pubblico</strong>
-          <span>Attitudine al contatto con le persone e alla collaborazione.</span>
+          <article class="experience">
+            <div class="experience-head">
+              <div>
+                <h3>Operatrice ristorazione - Burger King</h3>
+                <p>
+                  Supporto operativo nel servizio, attenzione al cliente e collaborazione
+                  con il team.
+                </p>
+              </div>
+
+              <span class="period">Febbraio 2025 - Luglio 2025 · 6 mesi</span>
+            </div>
+
+            <div class="competence-tags">
+              <span>Lavoro di squadra</span>
+              <span>Gestione dei ritmi veloci</span>
+              <span>Precisione e responsabilità</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="card fade-in">
-      <h2><span class="section-icon">🌟</span> Caratteristiche personali</h2>
+      <h2><span class="section-icon ios-emoji">💻</span> Competenze e attività</h2>
 
-      <ul>
-        <li>Socievole ed estroversa</li>
-        <li>Flessibile e adattabile in contesti diversi</li>
-        <li>Spirito competitivo che porta a miglioramento continuo</li>
-        <li>Determinata nel raggiungere obiettivi</li>
-        <li>Curiosa e incline all’apprendimento autonomo</li>
-      </ul>
+      <div class="content-box">
+        <ul>
+          <li>Creazione di siti web</li>
+          <li>Buona familiarità con strumenti digitali e informatici</li>
+          <li>Approccio pratico alla tecnologia e alla progettazione web</li>
+        </ul>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <span class="skill-icon ios-emoji">🌐</span>
+            <strong>Sviluppo Web</strong>
+            <span>Interesse per la creazione di siti semplici, moderni e funzionali.</span>
+          </div>
+
+          <div class="skill-box">
+            <span class="skill-icon ios-emoji">🧠</span>
+            <strong>Apprendimento autonomo</strong>
+            <span>Capacità di imparare in autonomia attraverso pratica e curiosità.</span>
+          </div>
+
+          <div class="skill-box">
+            <span class="skill-icon ios-emoji">🤝</span>
+            <strong>Relazione con il pubblico</strong>
+            <span>Attitudine al contatto con le persone e alla collaborazione.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card fade-in">
+      <h2><span class="section-icon ios-emoji">🌟</span> Caratteristiche personali</h2>
+
+      <div class="content-box">
+        <ul>
+          <li>Socievole ed estroversa</li>
+          <li>Flessibile e adattabile in contesti diversi</li>
+          <li>Spirito competitivo che porta a miglioramento continuo</li>
+          <li>Determinata nel raggiungere obiettivi</li>
+          <li>Curiosa e incline all’apprendimento autonomo</li>
+        </ul>
+      </div>
     </section>
 
   </main>
