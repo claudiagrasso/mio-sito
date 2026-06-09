@@ -8,13 +8,15 @@
   <style>
     :root {
       --dark: #1f2a37;
+      --dark-soft: #2f4054;
       --cream: #f6f1e7;
       --white: #ffffff;
-      --soft: #eef0f3;
+      --light: #f8fafc;
+      --border: #e8ebef;
       --text: #1f2a37;
       --muted: #667085;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      --radius: 18px;
+      --shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+      --radius: 20px;
     }
 
     * {
@@ -29,76 +31,132 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(31, 42, 55, 0.08), transparent 30%),
-        var(--cream);
+        radial-gradient(circle at top left, rgba(31, 42, 55, 0.08), transparent 32%),
+        linear-gradient(180deg, #f6f1e7 0%, #fbf8f1 100%);
       color: var(--text);
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #1f2a37, #2f4054);
+      background: linear-gradient(135deg, var(--dark), var(--dark-soft));
       color: var(--cream);
-      padding: 55px 20px 45px;
+      padding: 58px 20px 50px;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    header::after {
-      content: "";
+    .floating-icons {
       position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: rgba(246, 241, 231, 0.08);
-      top: -90px;
-      right: -80px;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
     }
 
-    .profile-badge {
-      width: 92px;
-      height: 92px;
+    .floating-icons span {
+      position: absolute;
+      font-size: clamp(1.4rem, 2vw, 2.2rem);
+      opacity: 0.10;
+      animation: floatIcon 6s ease-in-out infinite alternate;
+      filter: grayscale(100%);
+    }
+
+    .floating-icons span:nth-child(1) {
+      top: 18%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .floating-icons span:nth-child(2) {
+      top: 28%;
+      right: 14%;
+      animation-delay: 1s;
+    }
+
+    .floating-icons span:nth-child(3) {
+      bottom: 18%;
+      left: 18%;
+      animation-delay: 2s;
+    }
+
+    .floating-icons span:nth-child(4) {
+      bottom: 24%;
+      right: 20%;
+      animation-delay: 1.5s;
+    }
+
+    .floating-icons span:nth-child(5) {
+      top: 12%;
+      right: 34%;
+      animation-delay: 0.7s;
+    }
+
+    .floating-icons span:nth-child(6) {
+      bottom: 12%;
+      left: 42%;
+      animation-delay: 2.4s;
+    }
+
+    @keyframes floatIcon {
+      from {
+        transform: translateY(0) rotate(-4deg) scale(1);
+      }
+
+      to {
+        transform: translateY(-12px) rotate(5deg) scale(1.04);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .photo-wrap {
+      width: 132px;
+      height: 132px;
       margin: 0 auto 18px;
       border-radius: 50%;
-      background: rgba(246, 241, 231, 0.12);
+      padding: 5px;
+      background: rgba(246, 241, 231, 0.22);
       border: 1px solid rgba(246, 241, 231, 0.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2em;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.20);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .profile-badge:hover {
-      transform: scale(1.08);
-      background: rgba(246, 241, 231, 0.18);
+    .photo-wrap:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.26);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 50%;
+      display: block;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: clamp(2rem, 5vw, 2.75rem);
       letter-spacing: 0.5px;
-      position: relative;
-      z-index: 1;
     }
 
     header p {
       margin: 8px 0 0;
-      opacity: 0.85;
-      position: relative;
-      z-index: 1;
+      opacity: 0.86;
     }
 
     .header-actions {
-      margin-top: 22px;
+      margin-top: 24px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
-      position: relative;
-      z-index: 1;
     }
 
     .btn {
@@ -111,65 +169,65 @@
       padding: 10px 16px;
       border-radius: 999px;
       font-size: 0.92em;
-      font-weight: 600;
+      font-weight: 700;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-      background: #ffffff;
+      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.18);
+      background: var(--white);
     }
 
     .container {
-      max-width: 980px;
+      max-width: 1050px;
       margin: auto;
-      padding: 28px 20px;
+      padding: 30px 20px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
       gap: 18px;
       align-items: start;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.90);
       backdrop-filter: blur(8px);
       padding: 24px;
       margin: 15px 0;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.7);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
     }
 
     h2 {
       color: var(--dark);
       margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.35em;
+      margin-bottom: 15px;
+      font-size: 1.32em;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
     .section-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 13px;
       background: var(--dark);
       color: var(--cream);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.95em;
+      font-size: 1em;
       transition: transform 0.25s ease;
       flex-shrink: 0;
     }
@@ -202,8 +260,8 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: #f8fafc;
-      border: 1px solid #eef0f3;
+      background: var(--light);
+      border: 1px solid var(--border);
       padding: 11px 13px;
       border-radius: 14px;
       transition: transform 0.25s ease, background 0.25s ease;
@@ -212,7 +270,7 @@
     .info-item:hover,
     .contact-item:hover {
       transform: translateX(4px);
-      background: #ffffff;
+      background: var(--white);
     }
 
     .mini-icon {
@@ -230,15 +288,14 @@
     }
 
     .info-item:hover .mini-icon,
-    .contact-item:hover .mini-icon,
-    .tag:hover {
+    .contact-item:hover .mini-icon {
       transform: scale(1.12);
     }
 
     .contact-item a {
       color: var(--text);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       word-break: break-word;
     }
 
@@ -246,19 +303,118 @@
       text-decoration: underline;
     }
 
-    .tag {
-      display: inline-block;
-      background: var(--dark);
-      color: var(--cream);
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 0.86em;
-      margin: 4px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    .highlight {
+      background: var(--light);
+      border-left: 4px solid var(--dark);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-top: 16px;
+      color: #344054;
     }
 
-    .tag:hover {
-      box-shadow: 0 8px 18px rgba(31, 42, 55, 0.18);
+    .interest-scroll {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 6px 4px 14px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+    }
+
+    .interest-card {
+      min-width: 135px;
+      scroll-snap-align: start;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 14px;
+      text-align: center;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      background: var(--white);
+      box-shadow: 0 12px 24px rgba(31, 42, 55, 0.10);
+    }
+
+    .interest-icon {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 8px;
+      transition: transform 0.25s ease;
+    }
+
+    .interest-card:hover .interest-icon {
+      transform: scale(1.18) rotate(-3deg);
+    }
+
+    .interest-card strong {
+      font-size: 0.95em;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .experience {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .experience:hover {
+      transform: translateY(-4px);
+      background: var(--white);
+    }
+
+    .experience-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .experience h3 {
+      margin: 0;
+      font-size: 1.08em;
+      color: var(--dark);
+    }
+
+    .period {
+      white-space: nowrap;
+      background: var(--dark);
+      color: var(--cream);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.78em;
+      font-weight: 700;
+    }
+
+    .competence-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .competence-tags span {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 0.86em;
+      color: #344054;
+      transition: transform 0.25s ease;
+    }
+
+    .competence-tags span:hover {
+      transform: scale(1.05);
     }
 
     .skills-grid {
@@ -269,8 +425,8 @@
     }
 
     .skill-box {
-      background: #f8fafc;
-      border: 1px solid #eef0f3;
+      background: var(--light);
+      border: 1px solid var(--border);
       padding: 16px;
       border-radius: 16px;
       transition: transform 0.25s ease, background 0.25s ease;
@@ -278,7 +434,7 @@
 
     .skill-box:hover {
       transform: translateY(-4px);
-      background: #ffffff;
+      background: var(--white);
     }
 
     .skill-icon {
@@ -300,15 +456,6 @@
     .skill-box span {
       color: var(--muted);
       font-size: 0.92em;
-    }
-
-    .highlight {
-      background: #f8fafc;
-      border-left: 4px solid var(--dark);
-      padding: 14px 16px;
-      border-radius: 12px;
-      margin-top: 16px;
-      color: #344054;
     }
 
     footer {
@@ -336,6 +483,10 @@
       animation-delay: 0.3s;
     }
 
+    .fade-in:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
     @keyframes fadeIn {
       to {
         opacity: 1;
@@ -343,24 +494,29 @@
       }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       .grid,
       .skills-grid {
         grid-template-columns: 1fr;
       }
 
-      header h1 {
-        font-size: 2em;
+      .experience-head {
+        flex-direction: column;
+      }
+
+      .period {
+        white-space: normal;
       }
     }
 
     @media (max-width: 600px) {
       header {
-        padding: 42px 18px 34px;
+        padding: 44px 18px 36px;
       }
 
-      header h1 {
-        font-size: 1.7em;
+      .photo-wrap {
+        width: 116px;
+        height: 116px;
       }
 
       .card {
@@ -371,6 +527,10 @@
         width: 100%;
         justify-content: center;
       }
+
+      .interest-card {
+        min-width: 124px;
+      }
     }
   </style>
 </head>
@@ -378,33 +538,43 @@
 <body>
 
   <header>
-    <div class="profile-badge">CG</div>
-    <h1>Claudia Grasso</h1>
-    <p>Curriculum Vitae digitale</p>
+    <div class="floating-icons" aria-hidden="true">
+      <span>🏃‍♀️</span>
+      <span>🌐</span>
+      <span>🎮</span>
+      <span>📖</span>
+      <span>✈️</span>
+      <span>🎵</span>
+    </div>
 
-    <div class="header-actions">
-      <a class="btn" href="mailto:claudiagrasso91@gmail.com">✉️ Contattami</a>
-      <a class="btn" href="tel:+393921283051">📞 Chiama</a>
+    <div class="hero-content">
+      <div class="photo-wrap">
+        <img class="profile-photo" src="foto-cv.jpg" alt="Foto curriculum di Claudia Grasso">
+      </div>
+
+      <h1>Claudia Grasso</h1>
+      <p>Curriculum Vitae digitale</p>
+
+      <div class="header-actions">
+        <a class="btn" href="mailto:claudiagrasso91@gmail.com">✉️ Contattami</a>
+        <a class="btn" href="tel:+393921283051">📞 Chiama</a>
+      </div>
     </div>
   </header>
 
-  <div class="container">
+  <main class="container">
 
     <div class="grid">
-      <div class="card fade-in">
+      <section class="card fade-in">
         <h2><span class="section-icon">👤</span> Profilo</h2>
+
         <p>
-          Sono una persona socievole, curiosa e determinata, con interesse per la tecnologia,
-          l’informatica e lo sviluppo web. Mi piace imparare in autonomia e mettermi alla prova
+          Sono una persona socievole, curiosa e determinata, con interesse per tutto ciò che può
+          arricchire la mia persona in meglio. Mi piace imparare autonomamente e mettermi alla prova
           in attività pratiche e creative.
         </p>
 
         <div class="info-list">
-          <div class="info-item">
-            <span class="mini-icon">🎂</span>
-            <span>Data di nascita: <strong>4 giugno 2004</strong></span>
-          </div>
-
           <div class="info-item">
             <span class="mini-icon">⏳</span>
             <span>Età: <strong><span id="eta">22</span> anni</strong></span>
@@ -420,9 +590,9 @@
             <span>Città: <strong>Catania</strong></span>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="card fade-in">
+      <section class="card fade-in">
         <h2><span class="section-icon">📬</span> Contatti</h2>
 
         <div class="info-list">
@@ -443,23 +613,96 @@
         </div>
 
         <div class="highlight">
-          Disponibile ad apprendere, collaborare e crescere in contesti dinamici legati al digitale.
+          Disponibile ad apprendere, collaborare e crescere in nuovi contesti professionali.
+        </div>
+      </section>
+    </div>
+
+    <section class="card fade-in">
+      <h2><span class="section-icon">✨</span> Interessi</h2>
+
+      <div class="interest-scroll" aria-label="Interessi">
+        <div class="interest-card">
+          <span class="interest-icon">🏃‍♀️</span>
+          <strong>Sport</strong>
+        </div>
+
+        <div class="interest-card">
+          <span class="interest-icon">🌐</span>
+          <strong>Sviluppo Web</strong>
+        </div>
+
+        <div class="interest-card">
+          <span class="interest-icon">🎮</span>
+          <strong>Videogiochi</strong>
+        </div>
+
+        <div class="interest-card">
+          <span class="interest-icon">📖</span>
+          <strong>Lettura</strong>
+        </div>
+
+        <div class="interest-card">
+          <span class="interest-icon">✈️</span>
+          <strong>Viaggi</strong>
+        </div>
+
+        <div class="interest-card">
+          <span class="interest-icon">🎵</span>
+          <strong>Musica</strong>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card fade-in">
-      <h2><span class="section-icon">✨</span> Interessi</h2>
-      <span class="tag">Sport</span>
-      <span class="tag">Tecnologia</span>
-      <span class="tag">Informatica</span>
-      <span class="tag">Sviluppo Web</span>
-      <span class="tag">Videogiochi</span>
-      <span class="tag">Lettura Manga</span>
-    </div>
+    <section class="card fade-in">
+      <h2><span class="section-icon">💼</span> Esperienze lavorative</h2>
 
-    <div class="card fade-in">
+      <div class="timeline">
+        <article class="experience">
+          <div class="experience-head">
+            <div>
+              <h3>Addetta vendite - Sala visori in realtà virtuale</h3>
+              <p>
+                Assistenza ai clienti, presentazione dell’esperienza e supporto durante
+                l’utilizzo dei visori.
+              </p>
+            </div>
+
+            <span class="period">Settembre 2025 - Maggio 2026 · 8 mesi</span>
+          </div>
+
+          <div class="competence-tags">
+            <span>Accoglienza e relazione con il cliente</span>
+            <span>Comunicazione chiara</span>
+            <span>Gestione pratica delle attività</span>
+          </div>
+        </article>
+
+        <article class="experience">
+          <div class="experience-head">
+            <div>
+              <h3>Operatrice ristorazione - Burger King</h3>
+              <p>
+                Supporto operativo nel servizio, attenzione al cliente e collaborazione
+                con il team.
+              </p>
+            </div>
+
+            <span class="period">Febbraio 2025 - Luglio 2025 · 6 mesi</span>
+          </div>
+
+          <div class="competence-tags">
+            <span>Lavoro di squadra</span>
+            <span>Gestione dei ritmi veloci</span>
+            <span>Precisione e responsabilità</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="card fade-in">
       <h2><span class="section-icon">💻</span> Competenze e attività</h2>
+
       <ul>
         <li>Creazione di siti web</li>
         <li>Buona familiarità con strumenti digitali e informatici</li>
@@ -470,7 +713,7 @@
         <div class="skill-box">
           <span class="skill-icon">🌐</span>
           <strong>Sviluppo Web</strong>
-          <span>Interesse per la creazione di siti moderni, semplici e funzionali.</span>
+          <span>Interesse per la creazione di siti semplici, moderni e funzionali.</span>
         </div>
 
         <div class="skill-box">
@@ -480,25 +723,26 @@
         </div>
 
         <div class="skill-box">
-          <span class="skill-icon">⚙️</span>
-          <strong>Strumenti digitali</strong>
-          <span>Buona confidenza con tecnologia, informatica e ambienti digitali.</span>
+          <span class="skill-icon">🤝</span>
+          <strong>Relazione con il pubblico</strong>
+          <span>Attitudine al contatto con le persone e alla collaborazione.</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card fade-in">
+    <section class="card fade-in">
       <h2><span class="section-icon">🌟</span> Caratteristiche personali</h2>
+
       <ul>
         <li>Socievole ed estroversa</li>
         <li>Flessibile e adattabile in contesti diversi</li>
         <li>Spirito competitivo che porta a miglioramento continuo</li>
         <li>Determinata nel raggiungere obiettivi</li>
-        <li>Curiosa e incline all’apprendimento autonomo, soprattutto in ambito tecnologico</li>
+        <li>Curiosa e incline all’apprendimento autonomo</li>
       </ul>
-    </div>
+    </section>
 
-  </div>
+  </main>
 
   <footer>
     © Claudia Grasso - CV digitale
@@ -506,7 +750,7 @@
 
   <script>
     function calcolaEta() {
-      const dataNascita = new Date(2004, 5, 4); 
+      const dataNascita = new Date(2004, 5, 4);
       const oggi = new Date();
 
       let eta = oggi.getFullYear() - dataNascita.getFullYear();
